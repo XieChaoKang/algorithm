@@ -1,9 +1,3 @@
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
-
 public class 最长回文子串 {
 
     static String longestPalindrome(String s) {

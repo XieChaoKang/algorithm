@@ -2,6 +2,10 @@ import java.util.*;
 
 /**
  * 给出一个字符串 找出最长子串的长度
+ * 解题思路：双循环遍历
+ * 从i的下一个位置开始遍历 遍历一次长度+1 直到找到和i位置相同的字符 则子串结束
+ * 把字符放入map 的key 利用map的containsKey判断是否有相同字符在
+ * 把长度存入list 最后对list进行排序 直接读最后一个位置的值即是最长子串的长度
  */
 public class 最长子串长度 {
     static int length(String s){
@@ -47,7 +51,7 @@ public class 最长子串长度 {
         }
     }
     public static void main(String[] args) {
-        String s = "";
+        String s = "scgcs";
         System.out.print(length(s));
     }
 }

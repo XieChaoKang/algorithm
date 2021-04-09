@@ -1,7 +1,13 @@
 
 public class 整数反转 {
 
-    //暴力解法
+    /**
+     * 暴力解法
+     * 思路：直接循环遍历 拼接成字符串
+     * 转换为数字时碰到边界会抛出异常 直接return 0 即可
+     * @param x
+     * @return
+     */
     static int reverse(int x) {
         if (x == 0){
             return x;
@@ -29,6 +35,13 @@ public class 整数反转 {
         }
     }
 
+    /**
+     * 解题思路：取模运算
+     * 每次都取出个位数(pop) 然后结果数(ans)*10+个位数（pop） 进行拼接
+     * 判断拼接后的数是否达到边界 到则直接返回0
+     * @param x
+     * @return
+     */
     static int reverse2(int x){
         int ans = 0;
         while (x != 0) {
