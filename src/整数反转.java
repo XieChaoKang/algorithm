@@ -36,7 +36,7 @@ public class 整数反转 {
             // 7是2^31-1 的个位数 定边界
             if (ans > Integer.MAX_VALUE / 10 || (ans == Integer.MAX_VALUE / 10 && pop > 7))
                 return 0;
-            // 8是-2^31的个位数 定边界
+            // -8是-2^31的个位数 定边界
             if (ans < Integer.MIN_VALUE / 10 || (ans == Integer.MIN_VALUE / 10 && pop < -8))
                 return 0;
             //乘10拼接 顺序才能翻转
