@@ -1,5 +1,7 @@
 package 排序算法;
 
+import java.util.Arrays;
+
 /**
  * 冒泡算法的思想：
  * 每一趟排序找到对应的这一趟最小的数，放在对应的位置，比如第一趟找到第一小的数，放在第一位
@@ -30,8 +32,36 @@ public class 冒泡 {
         }
     }
 
+    public static void bubbleSort2(int[] list){
+        //交换得临时数
+        int temp;
+        //标记当前循环是否有发生过交换 没有则代表当前数组已经有序 无需继续循环
+        boolean flag = false;
+        //外部循环 要遍历的次数
+        for (int i = 0; i < list.length - 1; i++) {
+            //相邻的树两两比较
+            for (int j = list.length-1; j > i; j--) {
+                if (list[j-1]>list[j]){
+                    flag = true;
+                    temp = list[j-1];
+                    list[j-1] = list[j];
+                    list[j] = temp;
+                }
+            }
+            if (!flag){
+                break;
+            }else {
+                flag = false; //重置flag
+            }
+        }
+
+        //排序后结果输出
+        System.out.println(Arrays.toString(list));
+    }
+
     public static void main(String[] args) {
         int[] list = new int[]{1,3,7,2,8,4};
         bubbleSort(list);
+        bubbleSort2(list);
     }
 }
