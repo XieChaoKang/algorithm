@@ -5,10 +5,10 @@
 
 public class 删除链表倒数第N个结点 {
 
-    static ListNode del(ListNode head, int n){
-        ListNode d = new ListNode(0,head);
-        ListNode first = d;
-        ListNode second = d;
+    static Node del(Node head, int n){
+        Node d = new Node(0,head);
+        Node first = d;
+        Node second = d;
 
         for (int i = 0; i < n+1; i++) {
             first = first.next;
@@ -31,8 +31,8 @@ public class 删除链表倒数第N个结点 {
 
 class ListNode {
     int val;
-    ListNode next;
+    Node next;
     ListNode() {}
     ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    ListNode(int val, Node next) { this.val = val; this.next = next; }
 }
