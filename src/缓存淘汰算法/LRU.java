@@ -48,7 +48,6 @@ class Node {
     }
 }
 
-//构建双向链表及其相关操作
 class doubleList{
     Node head;
 
