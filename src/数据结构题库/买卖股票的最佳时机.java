@@ -53,11 +53,11 @@ public class 买卖股票的最佳时机 {
     //遍历 找到最低价格 然后后面的卖出价格来减 对比 找到最大利润返回
     public static int maxProfit1(int[] prices) {
         int min = Integer.MAX_VALUE, max = 0;
-        for (int i = 0; i < prices.length; i++) {
-            if (prices[i] < min){
-                min = prices[i];
-            }else {
-                max = Math.max((prices[i] - min), max);
+        for (int price : prices) {
+            if (price < min) {
+                min = price;
+            } else {
+                max = Math.max((price - min), max);
             }
         }
         return max;
