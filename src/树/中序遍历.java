@@ -14,15 +14,26 @@ public class 中序遍历 {
     }
 }
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode() {}
-    TreeNode(int val) { this.val = val; }
-}
 class Solution {
+
+    //递归
     public static List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        inorder(root, res);
+        return res;
+    }
+
+    public static void inorder(TreeNode node, List<Integer> list) {
+        if (node == null){
+            return;
+        }
+        inorder(node.left, list);
+        list.add(node.val);
+        inorder(node.right, list);
+    }
+
+    //迭代
+    public static List<Integer> inorderTraversal1(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         Deque<TreeNode> stk = new LinkedList<>();
         while (root != null || !stk.isEmpty()) {
