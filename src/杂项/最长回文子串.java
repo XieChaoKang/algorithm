@@ -1,3 +1,5 @@
+package 杂项;
+
 public class 最长回文子串 {
 
     static String longestPalindrome(String s) {

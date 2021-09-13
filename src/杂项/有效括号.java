@@ -1,9 +1,11 @@
+package 杂项;
+
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.LinkedList;
 
 /**
- * 有效括号
+ * 杂项.有效括号
  * https://leetcode-cn.com/problems/valid-parentheses/
  */
 

@@ -1,3 +1,5 @@
+package 杂项;
+
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**

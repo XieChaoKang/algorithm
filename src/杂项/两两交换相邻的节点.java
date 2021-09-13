@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+package 杂项;
 
 public class 两两交换相邻的节点 {
 

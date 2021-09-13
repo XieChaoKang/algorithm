@@ -1,3 +1,5 @@
+package 杂项;
+
 public class person {
     private String name;
     private String add;

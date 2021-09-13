@@ -1,3 +1,5 @@
+package 杂项;
+
 /**
  * https://leetcode-cn.com/problems/merge-k-sorted-lists/submissions/
  */
