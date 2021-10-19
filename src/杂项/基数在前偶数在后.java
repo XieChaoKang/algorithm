@@ -61,12 +61,31 @@ public class 基数在前偶数在后 {
         }
     }
 
+    public static void sor2(int[] nums){
+        if (nums.length < 2){
+            return;
+        }
+        int l = 0, r = nums.length-1;
+        while (l < r){
+            while (nums[l] % 2 != 0) l++;
+            while (nums[r] % 2 == 0) r--;
+            if (r < l){
+                break;
+            }
+            if (nums[l] % 2 == 0 && nums[r] % 2 != 0){
+                int temp = nums[l];
+                nums[l] = nums[r];
+                nums[r] = temp;
+            }
+        }
+    }
+
     public static void main(String[] args) {
         int[] nums = new int[]{1,2,3,4,5,6,7,8,9};
-        sor(nums);
+        sor2(nums);
         System.out.println(Arrays.toString(nums));
         int[] nu = new int[]{4,2,1,3};
-        sor1(nu);
+        sor2(nu);
         System.out.println(Arrays.toString(nu));
     }
 }
