@@ -38,6 +38,7 @@ public class 合并k个升序链表 {
         }
         Node[] list = new Node[]{l3,l4,l6};
         Node res = mergeKLists(list);
+        assert res != null;
         res.head.printNode();
     }
 }
